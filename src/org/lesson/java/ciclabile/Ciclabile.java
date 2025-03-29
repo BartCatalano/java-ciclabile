@@ -11,6 +11,7 @@ public class Ciclabile {
 // creo il costruttore
 public Ciclabile(int [] elenco){
     this.elencoElementi = elenco;
+    // metto il costrutto if per assegnare currentIndex agli elementi che verranno inseriti
     if(this.elencoElementi.length > 0){
         this.currentIndex = 0;}
 }
@@ -19,13 +20,12 @@ public Ciclabile(int [] elenco){
 
 // metodo per prendere il prossimo elemento
 
-public Ciclabile(int i, int j, Object object) {
-    //TODO Auto-generated constructor stub
-}
-
 public int prossimoElemento(){
+    // creo una var elemento alla quale assegno il valore dell intero nel currentIndex attuale
     int elemento = elencoElementi[currentIndex];
+    // aumento il currentIndex generale
     this.currentIndex++;
+    // ritorno l'elemento corrente portandomi dietro però l'aumento di index
      return elemento;
     }
 
@@ -33,9 +33,11 @@ public int prossimoElemento(){
 
 // metodo per controllare se ci sono altri elementi nell array
 public Boolean isElemento (){
+    // controllo se ci sono elementi nell array
     if (elencoElementi.length == 0){
    return false;
 }
+// ritorno true se la condizione è vera e quindi confermo che ci sono altri elementi
    return this.currentIndex < this.elencoElementi.length;
    }
 
