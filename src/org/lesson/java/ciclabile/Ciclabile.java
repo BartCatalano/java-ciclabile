@@ -40,5 +40,26 @@ public Boolean isElemento (){
    }
 
 
+//    BONUS
+// prevedere anche un costruttore che non prenda parametri e un metodo addElemento che permetta di aggiungere un nuovo intero all’elenco da ciclare.
+
+// creo il costruttore senza parametri
+public Ciclabile(){
+    this.elencoElementi = new int[0];
+}
+
+// creo metodo per aggiungere un intero all array
+public void addElemento(int elementoDaInserire){
+    // creo un nuovo array che è della lunghezza del vecchio +1
+    int[] nuovoElenco = new int[this.elencoElementi.length +1];
+    // faccio un ciclo fro che cicla tutti gli elementi presenti nel vecchio array e li inserisce nel nuovo
+    for(int i = 0; i < elencoElementi.length; i++){
+        nuovoElenco[i] = this.elencoElementi[i];
+    }
+    // qui assegno a nuovElenco come valore di elencoElementi
+    nuovoElenco[this.elencoElementi.length] = elementoDaInserire;
+    this.elencoElementi = nuovoElenco;
+}
+
 
    }

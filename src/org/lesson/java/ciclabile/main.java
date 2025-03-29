@@ -13,6 +13,19 @@ while(arrayProva.isElemento()){
     System.out.println(arrayProva.prossimoElemento());
 }
 
+// BONUS
+// creo l'array usando il costruttore vuoto
+Ciclabile arrayBonus = new Ciclabile();
+
+// aggiungo interi al nuovo array
+arrayBonus.addElemento(10);
+arrayBonus.addElemento(6);
+arrayBonus.addElemento(8);
+// creo un ciclo while come sopra per vedere se gli elementi inseriti sono stati inseriti
+while(arrayBonus.isElemento()){
+    System.out.println(arrayBonus.prossimoElemento());
+}
+
 
 
 
